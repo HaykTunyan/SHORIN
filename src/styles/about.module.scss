@@ -1,0 +1,110 @@
+@import 'mixins';
+
+.aboutWrapper {
+  padding: 0 40px 130px;
+
+  @include media-max-1280 {
+    padding: 40px 10px 80px;
+  }
+}
+
+.aboutContainer {
+  max-width: 1648px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 40px;
+  border-top: 2px solid #FF0000;
+
+  @include media-max-1280 {
+    padding-top: 0;
+    border: none;
+  }
+  span {
+    letter-spacing: 0;
+  }
+}
+
+.aboutTxtBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 128px;
+
+  @include media-max-1280 {
+    gap: 0;
+  }
+}
+
+.aboutText {
+  text-transform: uppercase;
+  font-weight: 500;
+  position: relative;
+
+  @include media-max-1280 {
+    padding-bottom: 80px;
+  }
+}
+
+.hoveredImg,
+.hoveredImg2,
+.hoveredImg3,
+.hoveredImg6,
+.hoveredImg7 {
+  position: absolute;
+  right: 0;
+  top: -80px;
+  pointer-events: none;
+}
+
+.hoveredImg2 {
+  top: 15px;
+  right: 50px;
+}
+
+.hoveredImg3 {
+  right: initial;
+  left: 300px;
+  top: 50%;
+}
+
+.hoveredImg6 {
+  left: 100px;
+  top: 50%;
+}
+
+.hoveredImg7 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hoveredImg,
+.hoveredImg2,
+.hoveredImg2,
+.hoveredImg3,
+.hoveredImg6,
+.hoveredImg7 {
+  @include media-max-1280 {
+    transform: unset;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.red {
+  color: #FF0000;
+}
+
+.italicLight {
+  font-style: italic;
+  font-weight: 300;
+}

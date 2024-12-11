@@ -1,0 +1,58 @@
+@import "mixins";
+
+.pages {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  gap: 200px;
+
+  @include media-max-1280 {
+    gap: 55px;
+  }
+}
+
+.pageNumbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.pageNumberWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageNumber {
+  padding: 10px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  color: #FF0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 22px;
+}
+
+.activePage {
+  border-bottom: 2px solid #FF0000;
+}
+
+.prevPageArrow,
+.nextPageArrow {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.arrowDisabled {
+  pointer-events: none;
+
+  path {
+    stroke: #000000;
+  }
+}

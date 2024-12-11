@@ -1,0 +1,290 @@
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --height-291-375: clamp(291px, calc(291px + (375 - 291) * ((100vw - 1280px) / (1728 - 1280))), 375px);
+  --height-291-375-2: clamp(291px, calc(291px + (375 - 291) * ((100vw - 768px) / (1280 - 768))), 375px);
+  --height-261-291: clamp(241px, calc(241px + (291 - 241) * ((100vw - 320px) / (768 - 320))), 291px);
+
+  --height-250-500: clamp(250px, calc(250px + (500 - 250) * ((100vw - 1280px) / (1728 - 1280))), 500px);
+  --height-video-mobile: clamp(168px, calc(168px + (419 - 168) * ((100vw - 320px) / (768 - 320))), 419px);
+  --height-video-tablet: clamp(419px, calc(419px + (706 - 419) * ((100vw - 768px) / (1280 - 768))), 706px);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: "SF-Pro-Display";
+  src: url("../../public/fonts/SF-Pro-Display-Light.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF-Pro-Display";
+  src: url("../../public/fonts/SF-Pro-Display-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF-Pro-Display";
+  src: url("../../public/fonts/SF-Pro-Display-Medium.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  font-family: "SF-Pro-Display", sans-serif;
+  // Anti Aliasing
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale; 
+  font-smoothing: antialiased;
+  // Anti Aliasing
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 36.32px;
+  color: #000000;
+  background: #ffffff;
+
+  @include media-max-1280 {
+    font-size: 18px;
+    line-height: 25.15px;
+  }
+}
+
+
+// .ReactModal__Overlay {
+//   background-color: white !important;
+// }
+
+.arrow {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 45px;
+  width: 50%;
+}
+
+.arrow--left {
+  left: 0;
+  cursor: url("/icons/sliderCursorLeft.svg"), auto;
+}
+
+.arrow--right {
+  right: 0;
+  cursor: url("/icons/sliderCursor.svg"), auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bodyOverflowHidden {
+  overflow: hidden;
+}
+
+.btn,
+.btnSec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  font-family: "SF-Pro-Display", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #000000;
+  background: #ffffff;
+  align-self: flex-start;
+
+  @media (hover: hover) {
+    &:hover {
+      div > span {
+        color: #ff0000;
+        transition: all 480ms ease-out;
+      }
+
+      div > svg {
+        path {
+          stroke: #ff0000;
+        }
+      }
+
+      .bottomLine {
+        animation: expandWidth 480ms ease forwards;
+      }
+    }
+  }
+
+  @include media-max-1280 {
+    width: 100%;
+    border-bottom: 2px solid #000000;
+    padding: 14px 0;
+
+    > div {
+      width: 100%;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 18px;
+    }
+  }
+}
+
+
+.btnSec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  margin-right: -130px;
+  margin-top: 45px;
+
+  @media (hover: hover) {
+    &:hover {
+      .bottomLine2 {
+        animation: expandWidth2 480ms ease forwards;
+      }
+    }
+  }
+
+  @include media-max-1280 {
+    padding: 10px 20px;
+    width: 100%;
+    border-bottom: 2px solid #ff0000;
+  }
+}
+
+.secBtnInner {
+  padding: 0 15px;
+  margin-bottom: 5px;
+
+  @include media-max-1280 {
+    margin-bottom: 0;
+
+    span {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: 0.04em;
+    }
+  }
+}
+
+.bottomLine,
+.bottomLine2 {
+  border-bottom: 2px solid #ffffff;
+  width: 0;
+  transition: all 240ms ease;
+  align-self: flex-start;
+
+  @include media-max-1280 {
+    display: none;
+  }
+}
+
+.bottomLine2 {
+  border-bottom: 2px solid #ffffff;
+}
+
+@keyframes expandWidth {
+  0% {
+    width: 0;
+  }
+  25% {
+    border-bottom: 2px solid #ff0000;
+    width: 25%;
+  }
+  50% {
+    border-bottom: 2px solid #ff0000;
+    width: 50%;
+  }
+  75% {
+    border-bottom: 2px solid #ff0000;
+    width: 75%;
+  }
+  100% {
+    width: 100%;
+    border-bottom: 2px solid #ff0000;
+  }
+}
+
+@keyframes expandWidth2 {
+  0% {
+    width: 0;
+    border-bottom: 2px solid #ff0000;
+  }
+  100% {
+    width: 100%;
+    border-bottom: 2px solid #ff0000;
+  }
+}
+
+.btnInnerContainer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.filterImg {
+  flex: 0 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  max-height: 100%;
+  object-fit: contain;
+  filter: url(#redFilter);
+}
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+}
+
+
+.flexBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.ReactCollapse--collapse {
+  transition: height .3s;
+}
+
+.btnPriceContainer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.hide {
+  display: none;
+}

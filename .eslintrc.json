@@ -1,0 +1,32 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    // Code Style
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "semi": ["error", "always"],
+    "no-mixed-spaces-and-tabs": "error",
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+
+    // Best Practices
+    "no-eval": "error",
+    "no-use-before-define": "error",
+
+    // ES6+ Features
+    "arrow-spacing": "error",
+    "prefer-const": "error",
+
+    // React (if applicable)
+    "react/jsx-uses-react": "error",
+
+    // Additional
+    "no-alert": "error",
+    "no-extra-parens": "error",
+    "eol-last": "error",
+    "prefer-arrow-callback": "error",
+    "no-magic-numbers": ["error", { "ignore": [-1, 0, 1] }],
+    "no-console": "error",
+    "camelcase": ["error", {"properties": "always"}],
+    "no-unused-vars": ["error", { "args": "none" }],
+    "no-shadow": "error"
+  }
+}

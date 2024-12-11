@@ -1,0 +1,46 @@
+@import "mixins";
+
+.bannerWrapper {
+  padding: 0 40px;
+  margin-top: -78px;
+  min-height: 100vh;
+
+  @media screen and (min-width: 1728px){
+    min-height: unset;
+  }
+
+  @include media-max-1280 {
+    padding: 0;
+    min-height: calc(100vh + 78px);
+  }
+}
+
+.bannerContainer {
+  max-width: 1648px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bannerImgContainer {
+  width: 100%;
+}
+
+.bannerImgDesktop {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+
+  @include media-max-1280 {
+    display: none;
+  }
+}
+
+.bannerImgMobile {
+  display: none;
+  width: 100%;
+
+  @include media-max-1280 {
+    display: block;
+    margin-top: 48px;
+  }
+}

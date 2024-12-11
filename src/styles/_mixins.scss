@@ -1,0 +1,17 @@
+@mixin media-max-1280 {
+  @media screen and (max-width: 1280px){
+    @content;
+  }
+}
+
+@mixin media-max-768 {
+  @media screen and (max-width: 768px){
+    @content;
+  }
+}
+
+@mixin media-max-1728 {
+  @media screen and (max-width: 1728px){
+    @content;
+  }
+}

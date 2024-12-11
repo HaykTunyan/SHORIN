@@ -1,0 +1,654 @@
+// Catalog Module.
+@import "mixins";
+
+.catalogWrapper {
+  padding: 0 40px;
+
+  @media (max-width: 1024px) {
+    padding: 0 10px;
+  }
+}
+
+.container {
+  max-width: 1648px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+
+.catalogInputContainer {
+  padding: 78px 0 76px;
+
+  @media (max-width: 1024px) {
+    padding: 98px 0 80px;
+  }
+}
+
+.catalogContainer {
+  margin-bottom: 80px;
+
+  @media (max-width: 1024px) {
+    height: auto;
+    padding-bottom: 80px;
+    margin-bottom: 20px;
+  }
+}
+
+.desktopHight {
+  // height: 400px;
+}
+
+.partnersContainer {
+  display: flex;
+
+  gap: 50px;
+}
+
+
+.catalogNetworkContainer {
+  margin-bottom: 80px;
+
+  @media (max-width: 1024px) {
+    height: auto;
+    margin-top: -40px;
+  }
+}
+
+.inputBanner {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  gap: 10px;
+
+  @media (max-width: 1024px) {
+    gap: 6px;
+  }
+}
+
+.bannerSearch {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.searchBottom {
+  width: 100%;
+  background-color: #ff0000;
+  height: 2px;
+}
+
+.iconButton {
+  border: none;
+  background: inherit;
+  cursor: pointer;
+
+  @media (max-width: 1024px) {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 76px;
+}
+
+.rowContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.imagesRow {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.flexItem {
+  text-align: center;
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  margin-top: 0;
+
+  @media (hover:hover) {
+    &:hover {
+      .itemImage {
+        filter: grayscale(100%);
+      }
+    }
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+}
+
+.itemImage {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ff0000;
+  mix-blend-mode: lighten;
+  pointer-events: none;
+}
+
+.overlayBorder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #ff0000;
+}
+
+.buttonTab {
+  font-family: "SF-Pro-Display", sans-serif;
+  background: inherit;
+  border: none;
+  color: #ff0000;
+  font-size: 26px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.activeButton {
+  color: #c2c2c2;
+}
+
+.subtitle {
+  color: #ff0000;
+  font-size: 26px;
+  font-weight: 400;
+  margin-right: 15px;
+  text-transform: uppercase;
+
+  @media (max-width: 1024px) {
+    font-size: 18px;
+    font-style: normal;
+    line-height: 138%;
+    margin-right: 0;
+  }
+}
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+}
+
+.catalogNetwork {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (max-width: 1200px) {
+    gap: 16px;
+  }
+}
+
+.flexBetween,
+.flexBetween2,
+.flexBetween3,
+.flexBetween4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  @media (max-width: 1200px) {
+    align-items: flex-start;
+    text-align: left;
+    gap: 38px;
+  }
+}
+
+.flexBetween4 {
+  cursor: pointer;
+
+  @media (max-width: 1200px) {
+    align-items: center;
+    gap: 6px;
+  }
+}
+
+.flexBetween2 {
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.drpDwn {
+  width: 140px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  border: 2px solid #FF1D1D;
+  background: #ffffff;
+  left: -20px;
+  top: 65px;
+  z-index: 111111;
+  cursor: initial;
+
+  @media (max-width: 1200px) {
+    width: 107px;
+    left: unset;
+    right: 0;
+    top: 55px;
+    padding: 16px;
+  }
+}
+
+.drpDwnItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 100%;
+
+  @media (max-width: 1200px) {
+    gap: 0;
+  }
+}
+
+.itemTitle {
+  color: #F00;
+  text-transform: uppercase;
+}
+
+.flexBetween3 {
+  gap: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 15px;
+}
+
+.spaceXMaterial,
+.spaceXDashes {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.35px;
+  text-align: left;
+  color: rgba(0, 0, 0, .3);
+  text-transform: uppercase;
+}
+
+.spaceXDashes {
+  letter-spacing: -0.06em;
+}
+
+.spaceXHeader {
+  text-transform: uppercase;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.listNetwork {
+  cursor: pointer;
+  @media (hover: hover) {
+    &:hover {
+      a {
+        color: #FF0000;
+      }
+
+      span {
+        color: #FF0000;
+      }
+    }
+  }
+}
+
+.titleInfo {
+  font-size: 26px;
+  font-weight: 400;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.timeInfo {
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.imageContainerMobile {
+  display: none;
+}
+
+.bannerIcons {
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.showInfoImage {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.spaceX {
+  margin: 0 5px;
+  text-transform: uppercase;
+}
+
+.searchContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .searchIcon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    outline: none;
+  }
+  .searchInput {
+    width: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    transition: width 0.7s ease, padding 0.7s ease;
+    color: #ff0000;
+    font-size: 18px;
+    font-weight: 400;
+    animation: openWidth 1000ms ease forwards;
+  }
+
+  .searchInput::placeholder {
+    color: #ff0000;
+    opacity: 1;
+  }
+
+  .searchOpen {
+    width: 100%;
+  }
+
+  @keyframes expandWidth {
+    0% {
+      width: 0;
+    }
+    25% {
+      width: 25%;
+    }
+    50% {
+      width: 50%;
+    }
+    75% {
+      width: 75%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+}
+
+.transparentModel {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  background: none;
+  pointer-events: none;
+}
+
+.hoverDiv {
+  position: absolute;
+  //top: 40%;
+  //left: 45%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #ff1d1d;
+}
+
+.hoverImage
+.hoverImageNet {
+  width: 200px;
+  height: auto;
+}
+
+.hoverImageNet {
+  width: 300px;
+}
+
+@media (max-width: 1024px) {
+  .imageContainer {
+    display: none;
+  }
+
+  .imageContainerMobile {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 80px;
+  }
+
+  .mobileTop {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .flexItem {
+    text-align: center;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 21.5px;
+  }
+
+  .timeInfo,
+  .titleInfo {
+    font-size: 18px;
+    color: black;
+  }
+
+  .buttonTab {
+    font-size: 18px;
+  }
+
+  .bannerIcons {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .searchSize {
+    width: 100%; // 75%
+  }
+
+  .btnMobileAnimate {
+    display: none;
+  }
+
+  .filterSize {
+    width: 25%;
+    display: none;
+  }
+}
+
+// Catalog Item Style.
+
+.bannerContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.descriptionInfo {
+  .infoParagraph {
+    padding-top: 25px;
+    padding-bottom: 40px;
+  }
+
+  .infoText {
+    font-size: 26px;
+    font-weight: 500;
+  }
+
+  .priceText {
+    color: #ff0000;
+    font-size: 26px;
+    font-weight: 500;
+  }
+}
+
+.giclee {
+  margin-top: 80px;
+  .glileeInfo {
+    padding-top: 25px;
+    padding-bottom: 50px;
+  }
+
+  .glileeImage {
+    margin-top: 50px;
+    margin-bottom: 270px;
+  }
+
+  .gilieeBackground {
+    // width: 100%;
+    // height: 300px;  // for Desktop Size
+    // background:
+    //     // linear-gradient(rgb(34, 181, 49), rgb(34, 181, 49)),
+    //     url('../../public//images/catalog/giclee-green.png') no-repeat center center;
+    // background-size: cover;
+    // object-fit: cover;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // border: 2px solid #22B531;
+  }
+
+  .activeImageHover {
+    width: 100%;
+    height: 300px; // for Desktop Size
+    background:
+            // linear-gradient(rgb(34, 181, 49), rgb(34, 181, 49)),
+            url("../../public//images/catalog/giclee-green.png") no-repeat center
+            center;
+    background-size: cover;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #22b531;
+  }
+
+  .pasiveImageHover {
+    width: 100%;
+    height: 300px; // for Desktop Size
+    background:
+            // linear-gradient(rgb(34, 181, 49), rgb(34, 181, 49)),
+            url("../../public//images/catalog/giclee-red.png") no-repeat center center;
+    background-size: cover;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ff0000;
+  }
+
+  .textNumber {
+    font-weight: 400;
+    color: #ff0000;
+  }
+}
+
+.gicleFooter {
+  padding-bottom: 50px;
+  .infoTitle,
+  .infoYear,
+  .footerParagraph {
+    text-transform: uppercase;
+  }
+
+  .footerInfo {
+    padding-bottom: 30px;
+  }
+}
+
+.footerSelector {
+  padding-top: 50px;
+  padding-bottom: 40px;
+
+  .listPrice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding-bottom: 24px;
+    text-transform: uppercase;
+    :hover {
+      color: #ff0000;
+    }
+  }
+
+  .activePrice {
+    cursor: pointer;
+
+    :hover {
+      color: #ff0000;
+    }
+  }
+
+  .inactive {
+    color: #c2c2c2;
+    cursor: no-drop;
+  }
+
+  .activeColor {
+    color: #ff0000;
+  }
+
+  .priceSubbmit {
+    padding-top: 50px;
+
+    .subbmitText {
+      margin-right: 10px;
+    }
+
+  }
+}

@@ -1,0 +1,379 @@
+@import "mixins";
+
+.modalContainer {
+  width: 500px;
+  height: 300px;
+  background-color: #ff1d1d;
+}
+
+.divBanner {
+  border: 2px solid #ff1d1d;
+  padding: 30px;
+  width: 1380px;
+  .flexRowBetweenM {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .flexRowM {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .flexImageM {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .flexButtonM {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .flexJustifyBetweenM {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .flexInfoM {
+    width: 46%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+  }
+
+  .flexCenter {
+    display: flex;
+    align-items: center;
+  }
+
+  .catalogDIv {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    height: 360px;
+    overflow-y: auto;
+  }
+
+  .topSpace {
+    margin-top: 50px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .redTitle {
+    border: none;
+    background: inherit;
+    outline: none;
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: 500;
+    color: #ff0000;
+    text-transform: uppercase;
+  }
+
+  .priceSlectTitle {
+    border: none;
+    background: inherit;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    color: #ff0000;
+    margin: 0 10px;
+  }
+
+  .priceTitle {
+    border: none;
+    background: inherit;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0 10px;
+  }
+
+  .closeBtn {
+    background: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .deleteBtn {
+    background: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .catalogNetwork {
+    width: 130px;
+    height: 68px;
+    object-fit: cover;
+  }
+
+  .borderRed {
+    background: #ff0000;
+    height: 2px;
+    width: 100%;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .spaceX {
+    margin: 0 40px;
+  }
+
+  .spaceM {
+    margin: 0 20px;
+  }
+
+  .spaceS {
+    margin: 0 5px;
+  }
+
+  .paddingList {
+    padding-bottom: 20px;
+  }
+
+  .priceListRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .catalogMobileDiv {
+    display: none;
+  }
+
+  .flexFooter {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+  }
+
+  @media (max-width: 1400px) {
+    width: 500px;
+    // border: none;
+    // padding: 0;
+    padding: 20px;
+
+    font-size: 18px;
+    font-weight: 400;
+
+    .title {
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    .catalogDIv {
+      display: none;
+    }
+
+    .catalogMobileDiv {
+      display: flex;
+      flex-direction: column;
+      max-height: 400px;
+      overflow-y: auto;
+
+      .flexColumntItem {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+      .title {
+        font-size: 18px;
+      }
+
+      .flexRowBetweenM {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0;
+      }
+      .flexRowBetweenBaseline {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+      }
+      .flexVarianM {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+        gap: 10px;
+
+        button {
+          margin: 0;
+          font-size: 18px;
+        }
+      }
+
+      .gicleImage {
+        width: 100%;
+        height: 80px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+
+        .imageModal {
+          width: 100% !important;
+          height: 100% !important;
+          object-fit: cover !important;
+        }
+      }
+
+      .deleteBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .itemGicle {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+
+      .borderItem {
+        margin-top: 15px;
+        width: 100%;
+        height: 2px;
+        background: #ff000033;
+      }
+
+      .priceListRow {
+        .priceTitle,
+        .priceSlectTitle {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .redTitle {
+      font-size: 18px;
+      align-items: flex-start;
+      text-align: left;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .flexFooter {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 900px) {
+    width: 360px;
+    
+  }
+}
+
+.flexJustifyBetween {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeIcon {
+  width: 28px;
+  height: 28px;
+}
+
+.reqestContainer {
+  width: 560px;
+
+  .title {
+    font-size: 24px;
+    color: #ff0000;
+    text-transform: uppercase;
+  }
+
+  .closeBtn {
+    background: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .description {
+    color: #ff0000;
+    font-size: 22px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    @include media-max-1280 {
+      font-size: 16px !important;
+      text-transform: none !important;
+    }
+  }
+
+  .inputDiv {
+    border-bottom: 2px solid;
+    border-color: #ff1d1d;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .checkBoxWhidth {
+    width: 20px;
+  }
+
+  .checkBoxM {
+      display: flex;
+      // padding-bottom: 0 !important;
+  }
+
+  @media (max-width: 1400px) {
+    width: 400px;
+
+    .description,
+    .title {
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    
+  }
+
+  @media (max-width: 960px) {
+    width: 330px;
+
+    .checkBoxM {
+      padding-bottom: 20px;
+
+    }
+  }
+}
+
+.disabledStyle {
+  cursor: no-drop !important;
+  opacity: 0.5;
+}
+
+.modalPurchaseStyle {
+
+}

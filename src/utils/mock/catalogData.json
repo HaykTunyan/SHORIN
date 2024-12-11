@@ -1,0 +1,82 @@
+[
+    {
+        "id": 0,
+        "title": "Коллекционер",
+        "url": "/",
+        "description": "АКРИЛ, МАСЛО",
+        "dimensions": "100 x 100 SM",
+        "year": "2008",
+        "alt": "Image-One",
+        "image": "/images/mock/image-one.png"
+    },
+    {
+        "id": 1,
+        "title": "Стоянка Y",
+        "url": "/",
+        "description": "АКРИЛ, МАСЛО",
+        "dimensions": "100 x 80 SM",
+        "year": "2008",
+        "alt": "Image-Two",
+        "image": "/images/mock/image-two.png"
+    },
+    {
+        "id": 2,
+        "title": "МАРС",
+        "url": "/",
+        "description": "АКРИЛ, МАСЛО",
+        "dimensions": "100 x 250 SM",
+        "year": "2008",
+        "alt": "Image-Three",
+        "image": "/images/mock/image-three.png"
+    },
+    {
+        "id": 3,
+        "title": "коллекционер",
+        "url": "/",
+        "description": "АКРИЛ, МАСЛО",
+        "dimensions": "100 x 90 SM",
+        "year": "2008",
+        "alt": "Image-Four",
+        "image": "/images/mock/image-four.png"
+    },
+    {
+        "id": 4,
+        "title": "NORMANDIE",
+        "url": "/",
+        "description": "АКРИЛ, МАСЛО",
+        "dimensions": "100 x 250 SM",
+        "year": "2018",
+        "alt": "Image-Five",
+        "image": "/images/mock/image-five.png"
+    },
+    {
+        "id": 5,
+        "title": "ПЕРСИДСКИЙ ЗАЛИВ",
+        "url": "/",
+        "description": "АКРИЛ, МАСЛО",
+        "dimensions": "100 x 220 SM",
+        "year": "2022",
+        "alt": "Image-Six",
+        "image": "/images/mock/image-six.png"
+    },
+    {
+        "id": 6,
+        "title": "ВЫЕЗД ДО 12-ТИ",
+        "url": "/",
+        "description": "АКРИЛ, МАСЛО",
+        "dimensions": "100 x 100 SM",
+        "year": "2008",
+        "alt": "Image-Seven",
+        "image": "/images/mock/image-seven.png"
+    },
+    {
+        "id": 7,
+        "title": "ЕINTERNATIONAL WATERS",
+        "url": "/",
+        "description": "АКРИЛ, МАСЛО",
+        "dimensions": "100 x 220 SM",
+        "year": "2008",
+        "alt": "Image-Eght",
+        "image": "/images/mock/image-eght.png"
+    }
+]

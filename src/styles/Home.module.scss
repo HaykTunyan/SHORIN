@@ -1,0 +1,60 @@
+@import "mixins";
+
+.homePageContent {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.homePageTop {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsWrapper,
+.pagesWrapper {
+  padding: 78px 40px 120px;
+  height: 100%;
+
+  @include media-max-1280 {
+    padding: 80px 10px;
+  }
+
+  //@include media-max-768 {
+  //  padding: 32px 10px 80px;
+  //}
+}
+
+.pagesWrapper {
+  padding-top: 0;
+}
+
+.newsWrapContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.newsContainer,
+.pagesContainer {
+  max-width: 1648px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  @include media-max-1280 {
+    gap: 48px;
+  }
+
+  @include media-max-768 {
+    gap: 30px;
+  }
+}
+
+.pagesContainer {
+  flex-direction: initial;
+}
